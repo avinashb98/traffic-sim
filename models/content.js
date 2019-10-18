@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const languages = require('../languages.json');
 
 const { Schema } = mongoose;
 
@@ -14,20 +15,7 @@ const ContentSchema = new Schema({
     language: {
         type: String,
         required: true,
-        enum: [
-            'HINDI',
-            'ENGLISH',
-            'BENGALI',
-            'MARATHI',
-            'TAMIL',
-            'TELUGU',
-            'KANNADA',
-            'MALAYALAM',
-            'GUJARATI',
-            'URDU',
-            'PUNJABI',
-            'ODIA'
-        ]
+        enum: languages
     },
     type: {
         type: String,
